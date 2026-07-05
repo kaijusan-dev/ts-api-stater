@@ -1,4 +1,6 @@
-import express, { type Express, type Request, type Response } from 'express';
+import express, { type Request, type Response } from 'express';
+import {healthRouter} from './routes/health.routes.js';
+import {env} from './config/env.js';
 
 const app = express();
 
@@ -6,12 +8,8 @@ app.get('/', (req: Request, res: Response) => {
 	res.send('Hello World!');
 });
 
-app.get('/health', (req: Request, res: Response) => {
-	res.json({status: 'ok'});
-});
+app.use('/health', healthRouter);
 
-const PORT = Number(process.env.PORT || '3000');
-
-app.listen(PORT, () => {
-	console.log('Server started on port:', PORT);
+app.listen(env.PORT, () => {
+	console.log(`Server started on port ${env.PORT}`);
 });
