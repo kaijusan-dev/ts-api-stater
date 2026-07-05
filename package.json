@@ -1,0 +1,32 @@
+{
+  "type": "module",
+  "name": "ts-api-stater",
+  "version": "1.0.0",
+  "description": "мой первый проект на ts",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaijusan-dev/ts-api-stater.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaijusan-dev/ts-api-stater/issues"
+  },
+  "homepage": "https://github.com/kaijusan-dev/ts-api-stater#readme",
+  "devDependencies": {
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
